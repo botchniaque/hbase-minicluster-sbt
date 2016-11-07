@@ -5,7 +5,7 @@ Therefore a working sbt setup is much more complex.
 This is an example project showing how to do it. 
 
 run the test with:
-```shell
+```bash
 sbt test
 ```
 
