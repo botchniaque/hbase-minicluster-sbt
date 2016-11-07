@@ -23,3 +23,13 @@ libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.0.0" % Test
 
 )
+
+val twoCommands = taskKey[String]("Prints commit count of the current branch")
+twoCommands := {
+  val title = Process("""echo -e "Hi\nAlberto\nM""").lines.mkString("~*~")
+  val commitCount = Process(s"echo $title").lines.head
+  println(s"$title, I just called 2 commands within one sbt task. Geil, or what? ")
+  commitCount
+}
+
+
